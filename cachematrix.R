@@ -1,12 +1,5 @@
-## makeCacheMatrix : Defines functions to set a matrix value, get that matrix, 
-## cache its inverse, and get that inverse. Returns a list containing these 
-## functions.
-
-## cacheSolve : Calculates and returns the inverse of the matrix stored in the
-## list returned and caches it, provided an inverse isn't already cached. If so,
-## returns the cached value.
-
-##
+## Defines functions to set a matrix value, get that matrix, cache its inverse, 
+## and get that inverse. Returns a list containing these functions.
 
 makeCacheMatrix <- function(x = matrix()) {
   inv<-NULL
@@ -22,7 +15,9 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-##
+## Calculates and returns the inverse of the matrix stored in the list returned 
+## and caches it, provided an inverse isn't already cached. If so, returns the 
+##cached value.
 
 cacheSolve <- function(x, ...) {
   inv<-x$get_inverse()
